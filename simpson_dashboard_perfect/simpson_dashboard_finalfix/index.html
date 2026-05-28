@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simpson 1/3 Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.0/math.min.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="fondo"></div>
+
+<div class="dashboard">
+
+    <div class="panel panelInputs">
+
+        <div class="titulo">
+
+            <div>
+
+                <h1>
+                    <i class="fa-solid fa-car-side"></i>
+                    Simpson 1/3
+                </h1>
+
+                <p>
+                    Simulación de combustible
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="combustible">
+
+            <div class="textoGas">
+                <i class="fa-solid fa-gas-pump"></i>
+                Nivel de combustible
+            </div>
+
+            <div class="barra">
+                <div class="progreso" id="progreso"></div>
+            </div>
+
+        </div>
+
+        <div class="grupo">
+            <label>Función f(x)</label>
+            <input type="text"
+            id="funcion"
+            placeholder="Ej: sin(x) + x^2">
+        </div>
+
+        <div class="fila">
+
+            <div class="grupo">
+                <label>Distancia Inicial</label>
+                <input type="text" id="a"
+                placeholder="Ej: 0">
+            </div>
+
+            <div class="grupo">
+                <label>Distancia Final</label>
+                <input type="text" id="b"
+                placeholder="Ej: pi">
+            </div>
+
+        </div>
+
+        <div class="grupo">
+            <label>Intervalos (n)</label>
+            <input type="number" id="n">
+        </div>
+
+        <button onclick="calcular()">
+            <i class="fa-solid fa-calculator"></i>
+            Calcular
+        </button>
+
+    </div>
+
+    <div class="panel panelResultados">
+
+        <div class="tablaCard">
+            <div id="resultado"></div>
+        </div>
+
+        <div class="tablaCard">
+            <div id="tablaError"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="graficaContainer">
+
+    <div id="carroGrafica">
+        <i class="fa-solid fa-car-side"></i>
+    </div>
+
+    <div id="grafica"></div>
+
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

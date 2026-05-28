@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI';
+}
+
+body{
+    background:
+    linear-gradient(135deg,#020617,#0f172a,#172554);
+
+    color:white;
+
+    min-height:100vh;
+
+    padding:30px;
+}
+
+.fondo{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(59,130,246,0.25),transparent 30%);
+
+    z-index:-1;
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:25px;
+}
+
+.panel{
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:30px;
+}
+
+.panelResultados{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.tablaCard{
+    background:rgba(255,255,255,0.05);
+    border-radius:20px;
+    padding:20px;
+    overflow:auto;
+}
+
+h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+h1 i{
+    color:#60a5fa;
+}
+
+.titulo p{
+    color:#cbd5e1;
+}
+
+.combustible{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:20px;
+    margin:30px 0;
+}
+
+.textoGas{
+    margin-bottom:12px;
+    color:#93c5fd;
+    font-weight:bold;
+}
+
+.barra{
+    width:100%;
+    height:25px;
+    border-radius:30px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.08);
+}
+
+.progreso{
+    width:0%;
+    height:100%;
+    transition:1s;
+
+    background:
+    linear-gradient(90deg,#22c55e,#84cc16,#eab308,#f97316);
+}
+
+.grupo{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+}
+
+input{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+.fila{
+    display:flex;
+    gap:20px;
+}
+
+.fila .grupo{
+    flex:1;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:18px;
+
+    background:
+    linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid rgba(255,255,255,0.1);
+    padding:12px;
+    text-align:center;
+}
+
+th{
+    background:rgba(59,130,246,0.3);
+}
+
+.resultadoFinal{
+    margin-top:20px;
+    text-align:center;
+    font-size:28px;
+    color:#60a5fa;
+    font-weight:bold;
+}
+
+.graficaContainer{
+    margin-top:25px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:30px;
+
+    padding:30px;
+
+    position:relative;
+}
+
+#grafica{
+    width:100%;
+    height:550px;
+}
+
+#carroGrafica{
+    position:absolute;
+    font-size:45px;
+    color:#60a5fa;
+    z-index:100;
+    transition:0.2s linear;
+}
